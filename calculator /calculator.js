@@ -23,17 +23,18 @@ var calculator = {
 
 
 
-console.log(calculator.add(3,9));
+
+/*
+when the user, who has typed the values into inputs,
+clicks the button:
+- we grab the operand, firstnum, lastnum, from the inputs 
+- we look in the calcularo for the method that matches the operand
+- we call that method using the firstnum and lastnum form the inputs
+-we attach the result to the h1
+*/
 
 
-
-document.querySelector('#operand').value
-
-
-document.querySelector('#firstnum').value = num1;
-
-
-document.querySelector('#lastnum').value = num2;
+// console.log(calculator.add(3,9));
 
 
 
@@ -42,12 +43,15 @@ document.querySelector('#lastnum').value = num2;
 document.querySelector('#calculate').addEventListener('click', getAnswer);
 
 function getAnswer() {
-  document.querySelector('h1').innerHTML = ;
+  var operand = document.querySelector('#operand').value;
+  var firstnum = document.querySelector('#firstnum').value;
+  var lastnum = document.querySelector('#lastnum').value;
+  console.log(operand, firstnum, lastnum);
 }
 
 
 
-
+  // document.querySelector('h1').innerHTML = ;
 
 
 
