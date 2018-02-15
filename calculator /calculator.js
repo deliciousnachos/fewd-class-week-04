@@ -23,6 +23,9 @@ var calculator = {
 
 
 
+// console.log(calculator.add(3,9));
+
+
 
 /*
 when the user, who has typed the values into inputs,
@@ -34,12 +37,7 @@ clicks the button:
 */
 
 
-// console.log(calculator.add(3,9));
-
-
-
-
-
+/*
 document.querySelector('#calculate').addEventListener('click', getAnswer);
 
 function getAnswer() {
@@ -48,10 +46,22 @@ function getAnswer() {
   var lastnum = document.querySelector('#lastnum').value;
   console.log(operand, firstnum, lastnum);
 }
+*/
 
 
+document.querySelector('#calculate').addEventListener('click', getAnswer);
 
-  // document.querySelector('h1').innerHTML = ;
+function getAnswer() {
+  var operand = document.querySelector('#operand').value;
+  var firstnum = parseInt(document.querySelector('#firstnum').value);
+  var lastnum = parseInt(document.querySelector('#lastnum').value);
+  var result = calculator[operand](firstnum, lastnum);
+  document.querySelector('h1').innerHTML = result;
+}
+
+
+  
+
 
 
 
